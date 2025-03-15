@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Portfolio website of Jake W Sanford, showcasing coding skills and projects.">
+    <meta name="keywords" content="Jake Sanford, portfolio, software developer, coding projects">
+    <title>Jake W Sanford</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="css/profile.css">
+</head>
+<body>
+    <!-- Navbar -->
+    <header>
+        <nav class="Navbar">
+            <a href="#Home" class="active">Home</a>
+            <a href="#About">About</a>
+            <a href="#GitHub">GitHub</a>
+            <a href="#Contact">Contact</a>
+            <a href="resume.html">Resume</a>  
+            <a href="cover_letter.html">Cover Letter</a> 
+            <a href="goals.html">Goals</a>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="Home">
+        <video autoplay muted loop class="BackgroundVideo">
+            <source src="images/video/Typing.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+        <div class="Video_Text">
+            <h1>Jake W Sanford</h1>
+            <p>Welcome to my portfolio! I am currently attending WGU's software engineering bachelors degree. 
+            This webpage is to showcase my projects and knowledge of coding.
+            </p>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="About">
+        <div class="Row">
+            <div class="Image_Container">
+                <img src="images/Family.jpg" alt="Jake Sanford's Family">
+            </div>
+            <div class="Column_2">
+                <h2>About Me</h2>
+                <p>
+                    I am a software developer who loves to code! As a father of four, I enjoy 
+                    time with my family and traveling. I am set to graduate from WGU's Bachelors of SoftwareEengineering in 2026.
+                    Where I plan on changing fields from Chiropractic to Software Engineering.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- GitHub Section -->
+    <section id="GitHub">
+        <h2>GitHub</h2>
+        <p>
+            Explore more of my work and coding projects on my 
+            <a href="https://github.com/sanfjake" target="_blank" class="GitHub_Link" aria-label="Visit Jake Sanford's GitHub Profile">
+                GitHub Profile
+            </a>.
+        </p>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="Contact">
+        <h2>Contact Me</h2>
+        <form id="contact-form" action="https://formspree.io/f/mqakbvzw" method="POST">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" placeholder="Enter your name" required>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" placeholder="Enter your email" required>
+
+            <label for="message">Message:</label>
+            <textarea id="message" name="message" placeholder="Write your message" required></textarea>
+
+            <button type="submit">Send Message</button>
+        </form>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2024 Jake W Sanford. All rights reserved.</p>
+        <p>
+            <a href="mailto:jake.w.sanford@gmail.com">Email</a> | 
+            <a href="https://github.com/sanfjake" target="_blank" class="GitHub_Link">
+                GitHub
+            </a> | 
+            <a href="#Contact">Contact</a>
+        </p>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="portfolio.js"></script>
+</body>
+</html>
