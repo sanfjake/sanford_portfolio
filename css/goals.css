@@ -1,0 +1,52 @@
+body {
+    font-family: sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4; /* Light background */
+}
+
+.container {
+    width: 80%;
+    max-width: 960px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #fff; /* White container */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+h1, h2 {
+    color: #333;
+}
+
+ul {
+    list-style-type: disc;
+    margin-left: 20px;
+}
+
+li {
+    margin-bottom: 10px;
+}
+
+.goals, .aspirations, .approach {
+    margin-bottom: 20px;
+}
+
+strong {
+    font-weight: bold;
+}
+.Navbar {
+    text-align: center;
+    color: black;
+}
+
+.Navbar a {
+    color: black;
+    text-decoration: none;
+    padding: 10px 20px;
+    display: inline-block;
+}
+
+.Navbar a:hover {
+    background-color: white;
+}
