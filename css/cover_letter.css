@@ -24,7 +24,8 @@ header {
 }
 
 .Navbar a:hover {
-    background-color: #555;
+    background-color: white;
+    color: black;
 }
 
 #CoverLetterContent {
