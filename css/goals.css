@@ -3,7 +3,10 @@ body {
     line-height: 1.6;
     margin: 0;
     padding: 0;
-    background-color: #f4f4f4; /* Light background */
+    background-color: #f4f4f4;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
 }
 
 .container {
@@ -11,8 +14,18 @@ body {
     max-width: 960px;
     margin: 20px auto;
     padding: 20px;
-    background-color: #fff; /* White container */
+    background-color: #fff;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.page-container {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+.content-wrap {
+    flex: 1;
 }
 
 h1, h2 {
@@ -35,6 +48,7 @@ li {
 strong {
     font-weight: bold;
 }
+
 .Navbar {
     text-align: center;
 }
@@ -48,10 +62,19 @@ strong {
 
 .Navbar a:hover {
     background-color: white;
-    color: black 
+    color: black;
 }
+
 header {
     background-color: #333;
     color: #fff;
     padding: 10px 0;
+}
+
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 10px 0;
+    width: 100%;
 }
