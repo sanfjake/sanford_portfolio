@@ -244,3 +244,92 @@ input[type="submit"]:hover {
         padding: 8px 10px;
     }
 }
+#Contact {
+    padding: 20px;
+    /* Example: Adding a background or border */
+    /* background-color: #f9f9f9; */
+    /* border: 1px solid #ddd; */
+    /* border-radius: 5px; */
+}
+
+#Contact h2 {
+    font-size: 2em;
+    margin-bottom: 20px;
+    color: #333; /* Keep headings consistent */
+}
+
+#contact-form {
+    display: grid;
+    grid-template-columns: 1fr 2fr; /* Adjust as needed */
+    grid-gap: 10px;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+#contact-form label {
+    text-align: right;
+    padding-right: 10px;
+    font-weight: bold;
+}
+
+#contact-form input,
+#contact-form textarea {
+    width: 100%; /* Take up the grid cell width */
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-family: inherit; /* Use the body font */
+    font-size: 1em;
+}
+
+#contact-form textarea {
+    resize: vertical; /* Allow vertical resizing */
+    min-height: 100px;
+}
+
+#contact-form input:focus,
+#contact-form textarea:focus {
+    outline: none;
+    border-color: #007bff; /* A typical focus color */
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5); /* Optional: Add a subtle glow */
+}
+
+#contact-form button[type="submit"] {
+    grid-column: 2; /* Span across the input columns */
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1.1em;
+    transition: background-color 0.3s ease;
+    justify-self: start; /* Align button to the left */
+}
+
+#contact-form button[type="submit"]:hover {
+    background-color: #0056b3;
+}
+
+#form-status {
+    grid-column: 1 / 3; /* Span across all columns */
+    padding: 10px;
+    margin-top: 10px;
+    text-align: center;
+}
+
+.success {
+    background-color: #d4edda;
+    color: #155724;
+    border: 1px solid #c3e6cb;
+    border-radius: 4px;
+}
+
+.error {
+    background-color: #f8d7da;
+    color: #721c24;
+    border: 1px solid #f5c6cb;
+    border-radius: 4px;
+}
