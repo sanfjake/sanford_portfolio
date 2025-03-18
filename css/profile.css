@@ -8,7 +8,7 @@ body {
     text-align: center;
 }
 
-/* Headings */
+/* Typography */
 h1 {
     text-transform: uppercase;
     font-size: 2.5rem;
@@ -22,10 +22,8 @@ h1:hover {
     transform: scale(1.05);
 }
 
-/* Paragraphs */
 p {
     font-family: "Courier New", Courier, monospace;
-    text-align:  center;
     font-size: 1rem;
     padding: 0 20px;
     color: #555;
@@ -37,7 +35,6 @@ p:hover {
     transform: scale(1.02);
 }
 
-/* Links */
 a {
     color: #0366d6;
     text-decoration: none;
@@ -51,7 +48,7 @@ a:hover {
 
 /* Images */
 img {
-    border-radius: 8px;
+    border-radius: 50px;
     max-width: 100%;
     height: auto;
     margin: 10px auto;
@@ -61,26 +58,79 @@ img {
 
 img:hover {
     transform: scale(1.05);
+    border-radius: 50px;
 }
 
-/***** Image Hover Effect *****/
-.Image_Container {
-    position: relative;
+/***** About Section *****/
+#About {
+    display: flex;
+    flex-direction: column; /* Always stack items vertically */
+    align-items: stretch;
+    border-radius: 50px;
+}
+
+.Image_Grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 10px;
+    margin-bottom: 20px;
+}
+
+.Image_Item {
+    width: 100%;
     overflow: hidden;
-    display: inline-block;
-    text-align: center;
-    margin: 20px auto;
 }
 
-.Image_Container img {
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+.Image_Item img {
+    width: 100%;
+    height: auto;
+    display: block;
 }
 
-.Image_Container:hover img {
+.Image_Item.offset-right {
+    grid-column: 2 / 4;
+}
+
+.Image_Item.offset-left {
+    grid-column: 1 / 3;
+}
+
+.Image_Item.last-image {
+    grid-column: 2 / 3;
+    grid-row: 2 / 3;
+}
+
+.Column_2 {
+    flex: 1;
+}
+
+@media (max-width: 768px) {
+    .Image_Grid {
+        grid-template-columns: repeat(2, 1fr);
+        margin-right: 0;
+    }
+
+    .Image_Item.offset-right,
+    .Image_Item.offset-left,
+    .Image_Item.last-image {
+        grid-column: auto;
+        grid-row: auto;
+    }
+}
+.video-button{
+    background-color: #0078D4;
+    color: #fff;
+    padding: 10px 15px;
+    text-decoration: none;
+    font-size: 1rem;
+    border-radius: 5px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.video-button:hover {
+    background-color: #0056a3;
     transform: scale(1.05);
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
 }
-
 /***** Navbar *****/
 .Navbar {
     background-color: #000;
@@ -114,7 +164,9 @@ form {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
-input[type="text"], input[type="email"], textarea {
+input[type="text"],
+input[type="email"],
+textarea {
     width: 100%;
     padding: 10px;
     margin: 10px 0;
