@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Jake Sanford - Resume</title>
-    <link rel="stylesheet" type="text/css" href="css/resume.css"> 
+    <link rel="stylesheet" type="text/css" href="css/profile.css">
 </head>
 <body>
     <header>
@@ -13,63 +13,99 @@
         </nav>
     </header>
 
-    <section id="ResumeContent">
-        <div class="ResumeSection">
-            <h1>Jake Sanford</h1>
-            <p>2200 Macs Ave, Heyburn, ID 83336</p>
-            <p>208-670-5577 | <a href="mailto:jake.w.sanford@gmail.com">jake.w.sanford@gmail.com</a></p>
-        </div>
+    <main id="ResumeContent">
+        <article>
+            <section class="ResumeSection">
+                <h1>Jake Sanford</h1>
+                <p>2200 Macs Ave, Heyburn, ID 83336</p>
+                <p>208-670-5577 | <a href="mailto:jake.w.sanford@gmail.com">jake.w.sanford@gmail.com</a></p>
+            </section>
 
-        <div class="ResumeSection">
-            <h2>Work Experience</h2>
-            <div class="ResumeItem">
-                <h3>Mini-Cassia Chiropractic, Burley, Idaho - Physician/IT Specialist/Manager</h3>
-                <p>January 2018 - Current</p>
+            <section class="ResumeSection">
+                <h2>Work Experience</h2>
+                <article class="ResumeItem">
+                    <h3>Mini-Cassia Chiropractic, Burley, Idaho - Physician/IT Specialist/Manager</h3>
+                    <p>January 2018 - Current</p>
+                    <ul>
+                        <li>Manage all IT operations including PC, tablets, phones, WiFi and Access Points. <span class="cite">[cite: 1]</span></li>
+                        <li>Daily use of the internet, Microsoft Word, Microsoft Excel, Microsoft Outlook and other applications. <span class="cite">[cite: 2]</span></li>
+                        <li>Great use of time management, organizational skills and problem solving skills to manage patient treatment and all business operations. <span class="cite">[cite: 3]</span></li>
+                        <li>Great communication skills in both Spanish and English. <span class="cite">[cite: 4]</span></li>
+                        <li>Basic hardware and software troubleshooting. <span class="cite">[cite: 5]</span></li>
+                    </ul>
+                </article>
+            </section>
+
+            <section class="ResumeSection">
+                <h2>Education</h2>
+                <article class="ResumeItem">
+                    <h3>BYU-Idaho, Rexburg, ID</h3>
+                    <p>Bachelor of Science - Exercise Physiology (September 2012 - June 2014)</p>
+                </article>
+                <article class="ResumeItem">
+                    <h3>University of Western States, Portland, OR</h3>
+                    <p>Bachelor of Science - Human Biology (September 2014 - December 2017)</p>
+                    <p>Master of Science - Sports Medicine</p>
+                    <p>Doctor of Chiropractic</p>
+                </article>
+            </section>
+
+            <section class="ResumeSection">
+                <h2>Certifications</h2>
                 <ul>
-                    <li>Manage all IT operations including PC, tablets, phones, WiFi and Access Points. [cite: 1]</li>
-                    <li>Daily use of the internet, Microsoft Word, Microsoft Excel, Microsoft Outlook and other applications. [cite: 2]</li>
-                    <li>Great use of time management, organizational skills and problem solving skills to manage patient treatment and all business operations. [cite: 3]</li>
-                    <li>Great communication skills in both Spanish and English. [cite: 4]</li>
-                    <li>Basic hardware and software troubleshooting. [cite: 5]</li>
+                    <li>ITIL Foundation Certification - October 2022</li>
+                    <li>Comptia A+ - January 2023</li>
+                    <li>Comptia Network+ - April 2023</li>
+                    <li>Comptia Security+ - July 2023</li>
                 </ul>
-            </div>
-            </div>
+            </section>
 
-        <div class="ResumeSection">
-            <h2>Education</h2>
-            <div class="ResumeItem">
-                <h3>BYU-Idaho, Rexburg, ID</h3>
-                <p>Bachelor of Science - Exercise Physiology (September 2012 - June 2014)</p>
-            </div>
-            <div class="ResumeItem">
-                <h3>University of Western States, Portland, OR</h3>
-                <p>Bachelor of Science - Human Biology (September 2014 - December 2017)</p>
-                <p>Master of Science - Sports Medicine</p>
-                <p>Doctor of Chiropractic</p>
-            </div>
-            </div>
+            <section class="ResumeSection">
+                <h2>Key Projects</h2>
+                <ul>
+                    <li>Microsoft Windows Defender</li>
+                    <li>Microsoft Windows Firewall</li>
+                </ul>
+            </section>
 
-        <div class="ResumeSection">
-            <h2>Certifications</h2>
-            <ul>
-                <li>ITIL Foundation Certification - October 2022</li>
-                <li>Comptia A+ January 2023</li>
-                <li>Comptia Network+ April 2023</li>
-                <li>Comptia Security+ July 2023</li>
-            </ul>
-        </div>
+            <hr>
+            <div id="currentDate"></div>
 
-        <div class="ResumeSection">
-            <h2>Key Projects</h2>
-            <ul>
-                <li>Microsoft Windows Defender</li>
-                <li>Microsoft Windows Firewall</li>
-            </ul>
-        </div>
-    </section>
+            <table id="myTable">
+              <thead>
+                <tr>
+                  <th>Field</th>
+                  <th>Value</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td><strong>Name</strong></td>
+                  <td><em>Jake Sanford</em></td>
+                </tr>
+                <tr>
+                  <td><strong>Title</strong></td>
+                  <td>Physician/IT Specialist/Manager</td>
+                </tr>
+              </tbody>
+            </table>
+        </article>
+    </main>
 
     <footer>
         <p>&copy; 2024 Jake W Sanford. All rights reserved.</p>
     </footer>
+
+    <script>
+        function populateDate() {
+            const today = new Date();
+            const options = { year: 'numeric', month: 'long', day: 'numeric' };
+            const formattedDate = today.toLocaleDateString('en-US', options);
+            document.getElementById('currentDate').textContent = formattedDate;
+            console.log("Current date: " + formattedDate)
+
+        }
+        populateDate();
+    </script>
 </body>
 </html>

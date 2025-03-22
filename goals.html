@@ -4,52 +4,93 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Goals & Aspirations</title>
-    <link rel="stylesheet" href="css/goals.css">
+    <link rel="stylesheet" href="css/profile.css">
 </head>
 <body>
     <header>
-        <nav class="Navbar"> 
+        <nav class="Navbar">
             <a href="index.html">Home</a>
         </nav>
     </header>
-    <div class="container">
-        <h1>Goals & Aspirations</h1>
 
-        <section class="goals">
-            <h2>Professional Goals</h2>
-            <ul>
-                <li><strong>Academic Achievement:</strong> Graduate from WGU with a Bachelor's Degree in Software Engineering by 2026.</li>
-                <li><strong>Software Engineering Career:</strong> Secure a fulfilling role as a Software Engineer.</li>
-                <li><strong>Entrepreneurial Ventures:</strong>
+    <main id="goals-page">
+        <article>
+            <div class="container">
+                <h1>Goals & Aspirations</h1>
+
+                <section class="goals">
+                    <h2>Professional Goals</h2>
                     <ul>
-                        <li>Continue the growth of Overland Fitness.</li>
-                        <li>Explore developing gym management software.</li>
+                        <li><strong>Academic Achievement:</strong> Graduate from WGU with a Bachelor's Degree in Software Engineering by 2026.</li>
+                        <li><strong>Software Engineering Career:</strong> Secure a fulfilling role as a Software Engineer.</li>
+                        <li><strong>Entrepreneurial Ventures:</strong>
+                            <ul>
+                                <li>Continue the growth of Overland Fitness.</li>
+                                <li>Explore developing gym management software.</li>
+                            </ul>
+                        </li>
                     </ul>
-                </li>
-            </ul>
-        </section>
+                </section>
 
-        <section class="aspirations">
-            <h2>Personal Aspirations</h2>
-            <ul>
-                <li><strong>Family and Relationships:</strong> Prioritize being a supportive partner and family member.</li>
-                <li><strong>Personal Growth:</strong> Commit to continuous self-improvement.</li>
-            </ul>
-        </section>
+                <section class="aspirations">
+                    <h2>Personal Aspirations</h2>
+                    <ul>
+                        <li><strong>Family and Relationships:</strong> Prioritize being a supportive partner and family member.</li>
+                        <li><strong>Personal Growth:</strong> Commit to continuous self-improvement.</li>
+                    </ul>
+                </section>
 
-        <section class="approach">
-            <h2>My Approach</h2>
-            <p>I believe in a balanced approach to achieving my goals. This involves:</p>
-            <ul>
-                <li>Consistent effort.</li>
-                <li>Lifelong learning.</li>
-                <li>Integrity and resilience.</li>
-            </ul>
-            <p>I am excited about the future and the opportunities that lie ahead.</p>
-        </section>
-    </div>
+                <section class="approach">
+                    <h2>My Approach</h2>
+                    <p>I believe in a balanced approach to achieving my goals. This involves:</p>
+                    <ul>
+                        <li>Consistent effort.</li>
+                        <li>Lifelong learning.</li>
+                        <li>Integrity and resilience.</li>
+                    </ul>
+                    <p>I am excited about the future and the opportunities that lie ahead.</p>
+                </section>
+
+                <section class="media">
+                    <h2>Multimedia</h2>
+                    <img src="images/goal_image.jpg" alt="A person climbing a mountain, symbolizing goals" width="300">
+                    <audio controls src="audio/goal_audio.mp3">
+                        Your browser does not support the audio element.
+                    </audio>
+                    <video controls width="320" height="240" src="video/goal_video.mp4">
+                        Your browser does not support the video element.
+                    </video>
+                </section>
+
+                <section id="Contact">
+                    <h2>Contact Me</h2>
+                    <form id="contact-form" action="https://formspree.io/f/mqakbvzw" method="POST">
+                        <label for="firstName">First Name:</label>
+                        <input type="text" id="firstName" name="firstName" placeholder="Enter your first name" required>
+
+                        <label for="lastName">Last Name:</label>
+                        <input type="text" id="lastName" name="lastName" placeholder="Enter your last name" required>
+
+                        <label for="email">Email:</label>
+                        <input type="email" id="email" name="email" placeholder="Enter your email" required>
+
+                        <label for="phone">Phone Number (Optional):</label>
+                        <input type="tel" id="phone" name="phone" placeholder="Enter your phone number">
+
+                        <label for="message">Message:</label>
+                        <textarea id="message" name="message" placeholder="Write your message" required></textarea>
+
+                        <button type="submit">Send Message</button>
+                    </form>
+                    <div id="form-status" aria-live="polite"></div>
+                </section>
+            </div>
+        </article>
+    </main>
+
     <footer>
         <p>&copy; 2024 Jake W Sanford. All rights reserved.</p>
     </footer>
+    <script src="portfolio.js"></script>
 </body>
 </html>
