@@ -27,11 +27,11 @@
                     <h3>Mini-Cassia Chiropractic, Burley, Idaho - Physician/IT Specialist/Manager</h3>
                     <p>January 2018 - Current</p>
                     <ul>
-                        <li>Manage all IT operations including PC, tablets, phones, WiFi and Access Points. <span class="cite">[cite: 1]</span></li>
-                        <li>Daily use of the internet, Microsoft Word, Microsoft Excel, Microsoft Outlook and other applications. <span class="cite">[cite: 2]</span></li>
-                        <li>Great use of time management, organizational skills and problem solving skills to manage patient treatment and all business operations. <span class="cite">[cite: 3]</span></li>
-                        <li>Great communication skills in both Spanish and English. <span class="cite">[cite: 4]</span></li>
-                        <li>Basic hardware and software troubleshooting. <span class="cite">[cite: 5]</span></li>
+                        <li>Manage all IT operations including PC, tablets, phones, WiFi and Access Points.</li>
+                        <li>Daily use of the internet, Microsoft Word, Microsoft Excel, Microsoft Outlook and other applications.</li>
+                        <li>Great use of time management, organizational skills and problem solving skills to manage patient treatment and all business operations.</li>
+                        <li>Great communication skills in both Spanish and English. </li>
+                        <li>Basic hardware and software troubleshooting.</li>
                     </ul>
                 </article>
             </section>
@@ -72,22 +72,22 @@
             <div id="currentDate"></div>
 
             <table id="myTable">
-              <thead>
-                <tr>
-                  <th>Field</th>
-                  <th>Value</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <td><strong>Name</strong></td>
-                  <td><em>Jake Sanford</em></td>
-                </tr>
-                <tr>
-                  <td><strong>Title</strong></td>
-                  <td>Physician/IT Specialist/Manager</td>
-                </tr>
-              </tbody>
+                <thead>
+                    <tr>
+                        <th>Field</th>
+                        <th>Value</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>Name</strong></td>
+                        <td><em>Jake Sanford</em></td>
+                    </tr>
+                    <tr>
+                        <td><strong>Title</strong></td>
+                        <td>Physician/IT Specialist/Manager</td>
+                    </tr>
+                </tbody>
             </table>
         </article>
     </main>
@@ -102,8 +102,7 @@
             const options = { year: 'numeric', month: 'long', day: 'numeric' };
             const formattedDate = today.toLocaleDateString('en-US', options);
             document.getElementById('currentDate').textContent = formattedDate;
-            console.log("Current date: " + formattedDate)
-
+            console.log("Current date: " + formattedDate);
         }
         populateDate();
     </script>

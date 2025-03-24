@@ -10,20 +10,18 @@
     <link rel="stylesheet" type="text/css" href="css/profile.css">
 </head>
 <body>
-    <!-- Navbar -->
     <header>
         <nav class="Navbar">
             <a href="#Home" class="active">Home</a>
             <a href="#About">About</a>
             <a href="#GitHub">GitHub</a>
             <a href="#Contact">Contact</a>
-            <a href="resume.html">Resume</a>  
-            <a href="cover_letter.html">Cover Letter</a> 
+            <a href="resume.html">Resume</a>
+            <a href="cover_letter.html">Cover Letter</a>
             <a href="goals.html">Goals</a>
         </nav>
     </header>
 
-    <!-- Hero Section -->
     <section id="Home">
         <video autoplay muted loop class="BackgroundVideo">
             <source src="images/video/Typing.mp4" type="video/mp4">
@@ -31,29 +29,26 @@
         </video>
         <div class="Video_Text">
             <h1>Jake W Sanford</h1>
-            <p>Welcome to my portfolio! I am currently attending WGU's Software Engineering Bachelors degree. 
-            This webpage is to showcase my projects and knowledge of coding.
+            <p>Welcome to my portfolio! I am currently attending WGU's Software Engineering Bachelors degree.
+                This webpage is to showcase my projects and knowledge of coding.
             </p>
         </div>
     </section>
 
-    <!-- About Section -->
     <section id="About">
-        <div class="Image_Grid">
-            <div class="Image_Item">
-                <img src="images/family2.0.JPG" alt="Jake Sanford's Family">
-            </div>
-            <div class="Image_Item offset-right">
-                <img src="images/christmas.png" alt="">
-            </div>
-            <div class="Image_Item offset-left">
-                <img src="images/kids.JPG" alt="">
-            </div>
-            <div class="Image_Item">
-                <img src="images/walk.png" alt="">
-            </div>
-            <div class="Image_Item last-image">
-                <img src="images/trailer.jpg" alt="">
+        <div class="gallery-container">
+            <div class="gallery">
+                <div class="gallery-row">
+                    <img src="images/family2.0.JPG" alt="Jake Sanford's Family">
+                    <img src="images/christmas.png" alt="Christmas">
+                </div>
+                <div class="gallery-row">
+                    <img src="images/kids.JPG" alt="Kids">
+                    <img src="images/walk.png" alt="Walk">
+                </div>
+                <div class="gallery-row">
+                    <img src="images/trailer.jpg" alt="Trailer">
+                </div>
             </div>
         </div>
         <div class="Column_2">
@@ -68,53 +63,42 @@
         </div>
     </section>
 
-    <!-- GitHub Section -->
     <section id="GitHub">
         <h2>GitHub</h2>
         <p>
-            Explore more of my work and coding projects on my 
+            Explore more of my work and coding projects on my
             <a href="https://github.com/sanfjake" target="_blank" class="GitHub_Link" aria-label="Visit Jake Sanford's GitHub Profile">
                 GitHub Profile
-            </a>.
+            </a>
         </p>
     </section>
 
-    <!-- Contact Section -->
     <section id="Contact">
         <h2>Contact Me</h2>
         <form id="contact-form" action="https://formspree.io/f/mqakbvzw" method="POST">
             <label for="firstName">First Name:</label>
             <input type="text" id="firstName" name="firstName" placeholder="Enter your first name" required>
-    
+
             <label for="lastName">Last Name:</label>
             <input type="text" id="lastName" name="lastName" placeholder="Enter your last name" required>
-    
+
             <label for="email">Email:</label>
             <input type="email" id="email" name="email" placeholder="Enter your email" required>
-    
+
             <label for="phone">Phone Number (Optional):</label>
             <input type="tel" id="phone" name="phone" placeholder="Enter your phone number">
-    
+
             <label for="message">Message:</label>
             <textarea id="message" name="message" placeholder="Write your message" required></textarea>
-    
+
             <button type="submit">Send Message</button>
         </form>
-        <div id="form-status" aria-live="polite"></div> </section>
+        <div id="form-status" aria-live="polite"></div>
+    </section>
 
-    <!-- Footer -->
     <footer>
-        <p>&copy; 2024 Jake W Sanford. All rights reserved.</p>
+        <p>© 2024 Jake W Sanford. All rights reserved.</p>
         <p>
-            <a href="mailto:jake.w.sanford@gmail.com">Email</a> | 
+            <a href="mailto:jake.w.sanford@gmail.com">Email</a> |
             <a href="https://github.com/sanfjake" target="_blank" class="GitHub_Link">
                 GitHub
-            </a> | 
-            <a href="#Contact">Contact</a>
-        </p>
-    </footer>
-
-    <!-- JavaScript -->
-    <script src="portfolio.js"></script>
-</body>
-</html>

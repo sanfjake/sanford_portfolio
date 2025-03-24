@@ -69,54 +69,47 @@ img:hover {
     border-radius: 50px;
 }
 
-.Image_Grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-gap: 10px;
-    margin-bottom: 20px;
+/* Gallery Styles */
+.gallery-container {
+    background-color: #222; 
+    padding: 20px;
+    border-radius: 8px;
+    margin: 20px auto; 
+    max-width: 800px; 
 }
 
-.Image_Item {
-    width: 100%;
-    overflow: hidden;
+.gallery {
+    display: flex;
+    flex-direction: column; 
 }
 
-.Image_Item img {
-    width: 100%;
+.gallery-row {
+    display: flex;
+    justify-content: space-around; 
+    margin-bottom: 20px; 
+}
+
+.gallery-row:last-child {
+    justify-content: center; 
+    margin-bottom: 0;
+}
+
+.gallery-row img {
+    width: 48%; 
     height: auto;
-    display: block;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease;
 }
 
-.Image_Item.offset-right {
-    grid-column: 2 / 4;
+.gallery-row:last-child img {
+    width: 60%; 
 }
 
-.Image_Item.offset-left {
-    grid-column: 1 / 3;
+.gallery-row img:hover {
+    transform: scale(1.05);
 }
 
-.Image_Item.last-image {
-    grid-column: 2 / 3;
-    grid-row: 2 / 3;
-}
-
-.Column_2 {
-    flex: 1;
-}
-
-@media (max-width: 768px) {
-    .Image_Grid {
-        grid-template-columns: repeat(2, 1fr);
-        margin-right: 0;
-    }
-
-    .Image_Item.offset-right,
-    .Image_Item.offset-left,
-    .Image_Item.last-image {
-        grid-column: auto;
-        grid-row: auto;
-    }
-}
 .video-button{
     background-color: #0078D4;
     color: #fff;
@@ -192,75 +185,20 @@ input[type="submit"]:hover {
     transform: scale(1.05);
 }
 
-/***** Projects Section *****/
-.Projects {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 20px;
-    margin: 20px auto;
-    padding: 0 20px;
-}
 
-.Project_Item {
-    background-color: #222;
-    color: #fff;
-    text-align: center;
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.Project_Item:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 6px 12px rgba(255, 255, 255, 0.3);
-}
-
-.project-link {
-    display: inline-block;
-    margin-top: 10px;
-    padding: 10px 15px;
-    background-color: #0078D4;
-    color: #fff;
-    text-decoration: none;
-    font-size: 1rem;
-    border-radius: 5px;
-    transition: background-color 0.3s ease, transform 0.3s ease;
-}
-
-.project-link:hover {
-    background-color: #0056a3;
-    transform: scale(1.05);
-}
-
-/***** Responsive Design *****/
-@media (max-width: 576px) {
-    .Project_Item {
-        padding: 15px;
-    }
-
-    .project-link {
-        font-size: 0.9rem;
-        padding: 8px 10px;
-    }
-}
 #Contact {
     padding: 20px;
-    /* Example: Adding a background or border */
-    /* background-color: #f9f9f9; */
-    /* border: 1px solid #ddd; */
-    /* border-radius: 5px; */
 }
 
 #Contact h2 {
     font-size: 2em;
     margin-bottom: 20px;
-    color: #333; /* Keep headings consistent */
+    color: #333; 
 }
 
 #contact-form {
     display: grid;
-    grid-template-columns: 1fr 2fr; /* Adjust as needed */
+    grid-template-columns: 1fr 2fr; 
     grid-gap: 10px;
     background-color: #fff;
     padding: 20px;
@@ -276,11 +214,11 @@ input[type="submit"]:hover {
 
 #contact-form input,
 #contact-form textarea {
-    width: 100%; /* Take up the grid cell width */
+    width: 90%; 
     padding: 10px;
     border: 1px solid #ccc;
     border-radius: 4px;
-    font-family: inherit; /* Use the body font */
+    font-family: inherit; 
     font-size: 1em;
 }
 
@@ -292,8 +230,8 @@ input[type="submit"]:hover {
 #contact-form input:focus,
 #contact-form textarea:focus {
     outline: none;
-    border-color: #007bff; /* A typical focus color */
-    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5); /* Optional: Add a subtle glow */
+    border-color: #007bff; 
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5); 
 }
 
 #contact-form button[type="submit"] {
@@ -393,11 +331,6 @@ strong {
 
 em {
     font-style: italic;
-}
-
-span.cite {
-  font-size: 0.8em;
-  color: #888;
 }
 #CoverLetterContent {
     padding: 20px;
