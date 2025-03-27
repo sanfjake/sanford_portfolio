@@ -3,34 +3,53 @@
 
 #Home {
     position: relative;
-    height: 100vh;
-    overflow: hidden;
+    min-height: 80vh; 
     display: flex;
+    flex-direction: column; 
     align-items: center;
     justify-content: center;
     text-align: center;
+    padding: 80px 20px; 
 }
 
 .Welcome {
-    background-color: rgba(255, 255, 255, 0.9); /* Semi-transparent white */
-    padding: 30px;
+    background-color: rgba(255, 255, 255, 0.9);
+    padding: 40px; 
     border-radius: 12px;
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
-    max-width: 800px; /* Adjust as needed */
-    margin: 0 auto; /* Center the box */
+    max-width: 800px;
+    width: 90%; 
+    margin: 20px auto; 
 }
 
 .Welcome h1 {
-    font-size: 3em;
-    margin-bottom: 15px;
-    color: #333; /* Darker text color */
+    font-size: 3.2em; 
+    margin-bottom: 20px; 
+    color: #333;
+    font-weight: 600; 
 }
 
 .Welcome p {
     font-size: 1.2em;
-    color: #555; /* Darker text color */
+    color: #555;
+    line-height: 1.8; 
+    margin-bottom: 30px; 
 }
 
+@media (max-width: 768px) {
+    #Home {
+        min-height: auto; 
+        padding: 60px 15px;
+    }
+
+    .Welcome {
+        padding: 30px;
+    }
+
+    .Welcome h1 {
+        font-size: 2.8em;
+    }
+}
 /*...Gallery...*/
 
 .gallery-container {
@@ -73,163 +92,139 @@
 .gallery-row img:hover {
     transform: scale(1.05);
 }
+
 /*...About...*/
 
 #About {
-    padding: 50px 0;
-    background-color: #f9f9f9;
+    padding: 80px 0; 
+    background-color: #f4f7f9; 
     display: flex;
     flex-direction: column;
-    align-items: stretch;
-    border-radius: 50px;
+    align-items: center; /
+    border-radius: 12px; 
+    margin: 40px auto; 
+    max-width: 960px; 
+    width: 90%; 
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); 
 }
 
-.about-text { /* Use this for the text content */
-    max-width: none; /* Let the container handle width */
-    margin: 0; /* Let the container handle margin */
-    background-color: transparent; /* Make background transparent */
-    padding: 0; /* Let the container handle padding */
-    border-radius: 0; /* Let the container handle radius */
-    box-shadow: none; /* Let the container handle shadow */
+.about-text {
+    max-width: 80%; 
+    text-align: center; 
 }
 
 .about-text h2 {
-    font-size: 2.2em;
-    color: #2c3e50;
-    margin-bottom: 20px;
-    text-align: left;
+    font-size: 2.8em; 
+    color: #333; 
+    margin-bottom: 30px; 
+    font-weight: 600; 
+    text-align: center; 
 }
 
 .about-text p {
-    font-size: 1.1em;
-    color: #555;
-    text-align: left;
+    font-size: 1.15em; 
+    color: #4a4a4a; 
+    line-height: 1.8; 
+    margin-bottom: 30px; 
+    text-align: center;
 }
 
 .video-button {
     background-color: #007bff;
     color: #fff;
-    padding: 12px 20px;
+    padding: 14px 24px; 
     text-decoration: none;
-    font-size: 1.1em;
-    border-radius: 8px;
-    transition: background-color 0.3s ease, transform 0.3s ease;
-    display: inline-block;
-    margin-top: 20px;
+    font-size: 1.2em; 
+    border-radius: 10px; 
+    transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease; /
+    margin-top: 30px; 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); 
 }
 
 .video-button:hover {
     background-color: #0056b3;
-    transform: scale(1.02);
+    transform: scale(1.05); 
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3); 
 }
 
+@media (max-width: 768px) {
+    #About {
+        padding: 60px 20px; 
+        width: 95%; 
+    }
+
+    .about-text {
+        max-width: 90%; 
+    }
+
+    .about-text h2 {
+        font-size: 2.4em; 
+    }
+
+    .about-text p {
+        font-size: 1.1em; 
+    }
+}
 /*...Git Hub...*/
 
 #GitHub {
-    padding: 50px 0;
-    background-color: #f9f9f9;
+    padding: 80px 0;
+    background-color: #f4f7f9; 
+    text-align: center; 
+    margin: 40px auto; 
+    max-width: 960px; 
+    width: 90%; 
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); 
+    border-radius: 12px;
 }
 
 #GitHub h2 {
-    font-size: 2.2em;
-    color: #2c3e50;
-    margin-bottom: 20px;
-    text-align: left;
+    font-size: 2.8em;
+    color: #333;
+    margin-bottom: 30px;
+    font-weight: 600;
 }
 
 #GitHub p {
-    font-size: 1.1em;
-    color: #555;
-    text-align: left;
+    font-size: 1.2em; 
+    color: #4a4a4a; 
+    line-height: 1.8; 
+    margin-bottom: 30px;
 }
 
 .GitHub_Link {
     color: #007bff;
-    font-weight: 500;
+    font-weight: 600; 
     text-decoration: none;
-    transition: color 0.3s ease;
-    display: inline-block;
-    margin: 0 auto;
+    transition: color 0.3s ease, text-decoration 0.3s ease; 
+    padding: 12px 20px; 
+    border-radius: 8px; 
+    background-color: #e8f0fe; 
 }
 
 .GitHub_Link:hover {
     color: #0056b3;
-    text-decoration: underline;
+    text-decoration: none; 
+    background-color: #d0e1ff; 
 }
 
-/* Images */
-img {
-    border-radius: 8px;
-    max-width: 100%;
-    height: auto;
-    margin: 10px auto;
-    display: block;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
+@media (max-width: 768px) {
+    #GitHub {
+        padding: 60px 20px;
+        width: 95%;
+    }
 
-img:hover {
-    transform: scale(1.05);
-}
+    #GitHub h2 {
+        font-size: 2.4em;
+    }
 
-/* Gallery Styles */
-.gallery-container {
-    background-color: #222;
-    padding: 20px;
-    border-radius: 8px;
-    margin: 20px auto;
-    max-width: 800px;
-}
-
-.gallery {
-    display: flex;
-    flex-direction: column;
-}
-
-.gallery-row {
-    display: flex;
-    justify-content: space-around;
-    margin-bottom: 20px;
-}
-
-.gallery-row:last-child {
-    justify-content: center;
-    margin-bottom: 0;
-}
-
-.gallery-row img {
-    width: 48%;
-    height: auto;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
-    transition: transform 0.3s ease;
-}
-
-.gallery-row:last-child img {
-    width: 60%;
-}
-
-.gallery-row img:hover {
-    transform: scale(1.05);
-}
-
-.video-button {
-    background-color: #007bff;
-    color: #fff;
-    padding: 12px 20px;
-    text-decoration: none;
-    font-size: 1.1em;
-    border-radius: 8px;
-    transition: background-color 0.3s ease, transform 0.3s ease;
-    display: inline-block;
-    margin-top: 20px;
-}
-
-.video-button:hover {
-    background-color: #0056a3;
-    transform: scale(1.02);
+    #GitHub p {
+        font-size: 1.15em;
+    }
 }
 
 /* Navbar */
+
 .Navbar {
     background-color: #000;
     position: fixed;
@@ -254,7 +249,7 @@ img:hover {
     color: black;
 }
 
-/* Forms */
+/* Form */
 
 .form-container {
     background-color: #fff;
@@ -486,7 +481,6 @@ ResumeSection h3 {
     background-color: #f0f0f0;
 }
 
-/* Resume Lists Editing */
 ul {
     list-style-type: none;
     text-align: center;
@@ -653,4 +647,41 @@ strong {
 .media video {
     margin: 10px auto;
     display: block;
+}
+
+/*...Footer...*/
+
+footer {
+    background-color: #333; 
+    color: #fff;
+    text-align: center;
+    padding: 30px 20px; 
+    font-size: 0.9em; 
+    line-height: 1.6; 
+}
+
+footer p {
+    margin: 10px 0; 
+}
+
+footer a {
+    color: white; 
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+footer a:hover {
+    color: slategrey; 
+    text-decoration: underline;
+}
+
+.GitHub_Link {
+  font-weight: 600;
+  color: black;
+}
+
+@media (max-width: 768px) {
+    footer {
+        padding: 20px 10px; 
+    }
 }
