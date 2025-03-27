@@ -1,54 +1,165 @@
-/***** General Styling *****/
-body {
-    margin: 0;
-    font-family: "Trebuchet MS", sans-serif;
-    line-height: 1.6;
-    background-color: #f5f5f5;
-    color: #333;
+
+/*...Index...*/
+
+#Home {
+    position: relative;
+    height: 100vh;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     text-align: center;
 }
 
-/* Typography */
-h1 {
-    text-transform: uppercase;
-    font-size: 2.5rem;
-    margin: 20px 0;
-    color: #333;
-    transition: transform 0.3s ease, filter 0.3s ease;
+.Welcome {
+    background-color: rgba(255, 255, 255, 0.9); /* Semi-transparent white */
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+    max-width: 800px; /* Adjust as needed */
+    margin: 0 auto; /* Center the box */
 }
 
-h1:hover {
-    filter: brightness(90%);
-    transform: scale(1.05);
+.Welcome h1 {
+    font-size: 3em;
+    margin-bottom: 15px;
+    color: #333; /* Darker text color */
 }
 
-p {
-    font-family: "Courier New", Courier, monospace;
-    font-size: 1rem;
-    padding: 0 20px;
-    color: #555;
-    letter-spacing: 1px;
+.Welcome p {
+    font-size: 1.2em;
+    color: #555; /* Darker text color */
+}
+
+/*...Gallery...*/
+
+.gallery-container {
+    max-width: 800px;
+    margin: 0 auto 30px;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.gallery {
+    display: flex;
+    flex-direction: column;
+}
+
+.gallery-row {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 20px;
+}
+
+.gallery-row:last-child {
+    justify-content: center;
+    margin-bottom: 0;
+}
+
+.gallery-row img {
+    width: 48%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s ease;
 }
 
-p:hover {
+.gallery-row:last-child img {
+    width: 60%;
+}
+
+.gallery-row img:hover {
+    transform: scale(1.05);
+}
+/*...About...*/
+
+#About {
+    padding: 50px 0;
+    background-color: #f9f9f9;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    border-radius: 50px;
+}
+
+.about-text { /* Use this for the text content */
+    max-width: none; /* Let the container handle width */
+    margin: 0; /* Let the container handle margin */
+    background-color: transparent; /* Make background transparent */
+    padding: 0; /* Let the container handle padding */
+    border-radius: 0; /* Let the container handle radius */
+    box-shadow: none; /* Let the container handle shadow */
+}
+
+.about-text h2 {
+    font-size: 2.2em;
+    color: #2c3e50;
+    margin-bottom: 20px;
+    text-align: left;
+}
+
+.about-text p {
+    font-size: 1.1em;
+    color: #555;
+    text-align: left;
+}
+
+.video-button {
+    background-color: #007bff;
+    color: #fff;
+    padding: 12px 20px;
+    text-decoration: none;
+    font-size: 1.1em;
+    border-radius: 8px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    display: inline-block;
+    margin-top: 20px;
+}
+
+.video-button:hover {
+    background-color: #0056b3;
     transform: scale(1.02);
 }
 
-a {
-    color: #0366d6;
-    text-decoration: none;
-    transition: color 0.3s ease;
+/*...Git Hub...*/
+
+#GitHub {
+    padding: 50px 0;
+    background-color: #f9f9f9;
 }
 
-a:hover {
+#GitHub h2 {
+    font-size: 2.2em;
+    color: #2c3e50;
+    margin-bottom: 20px;
+    text-align: left;
+}
+
+#GitHub p {
+    font-size: 1.1em;
+    color: #555;
+    text-align: left;
+}
+
+.GitHub_Link {
+    color: #007bff;
+    font-weight: 500;
+    text-decoration: none;
+    transition: color 0.3s ease;
+    display: inline-block;
+    margin: 0 auto;
+}
+
+.GitHub_Link:hover {
     color: #0056b3;
     text-decoration: underline;
 }
 
 /* Images */
 img {
-    border-radius: 50px;
+    border-radius: 8px;
     max-width: 100%;
     height: auto;
     margin: 10px auto;
@@ -58,44 +169,35 @@ img {
 
 img:hover {
     transform: scale(1.05);
-    border-radius: 50px;
-}
-
-/***** About Section *****/
-#About {
-    display: flex;
-    flex-direction: column; /* Always stack items vertically */
-    align-items: stretch;
-    border-radius: 50px;
 }
 
 /* Gallery Styles */
 .gallery-container {
-    background-color: #222; 
+    background-color: #222;
     padding: 20px;
     border-radius: 8px;
-    margin: 20px auto; 
-    max-width: 800px; 
+    margin: 20px auto;
+    max-width: 800px;
 }
 
 .gallery {
     display: flex;
-    flex-direction: column; 
+    flex-direction: column;
 }
 
 .gallery-row {
     display: flex;
-    justify-content: space-around; 
-    margin-bottom: 20px; 
+    justify-content: space-around;
+    margin-bottom: 20px;
 }
 
 .gallery-row:last-child {
-    justify-content: center; 
+    justify-content: center;
     margin-bottom: 0;
 }
 
 .gallery-row img {
-    width: 48%; 
+    width: 48%;
     height: auto;
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
@@ -103,28 +205,31 @@ img:hover {
 }
 
 .gallery-row:last-child img {
-    width: 60%; 
+    width: 60%;
 }
 
 .gallery-row img:hover {
     transform: scale(1.05);
 }
 
-.video-button{
-    background-color: #0078D4;
+.video-button {
+    background-color: #007bff;
     color: #fff;
-    padding: 10px 15px;
+    padding: 12px 20px;
     text-decoration: none;
-    font-size: 1rem;
-    border-radius: 5px;
+    font-size: 1.1em;
+    border-radius: 8px;
     transition: background-color 0.3s ease, transform 0.3s ease;
+    display: inline-block;
+    margin-top: 20px;
 }
 
 .video-button:hover {
     background-color: #0056a3;
-    transform: scale(1.05);
+    transform: scale(1.02);
 }
-/***** Navbar *****/
+
+/* Navbar */
 .Navbar {
     background-color: #000;
     position: fixed;
@@ -149,102 +254,77 @@ img:hover {
     color: black;
 }
 
-/***** Forms *****/
-form {
-    background-color: #fff;
-    padding: 20px;
-    border-radius: 5px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-}
+/* Forms */
 
-input[type="text"],
-input[type="email"],
-textarea {
-    width: 100%;
-    padding: 10px;
-    margin: 10px 0;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    font-family: "Courier New", monospace;
-    transition: box-shadow 0.3s ease, border-color 0.3s ease;
-}
-
-input[type="submit"] {
-    background-color: #4CAF50;
-    color: white;
-    padding: 10px 20px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    font-size: 16px;
-    transition: background-color 0.3s ease, transform 0.3s ease;
-}
-
-input[type="submit"]:hover {
-    background-color: #45a049;
-    transform: scale(1.05);
-}
-
-
-#Contact {
-    padding: 20px;
-}
-
-#Contact h2 {
-    font-size: 2em;
-    margin-bottom: 20px;
-    color: #333; 
-}
-
-#contact-form {
-    display: grid;
-    grid-template-columns: 1fr 2fr; 
-    grid-gap: 10px;
+.form-container {
     background-color: #fff;
     padding: 20px;
     border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+}
+
+#contact-form {
+    display: flex; /* Use Flexbox */
+    flex-direction: column; /* Stack items vertically */
+    align-items: stretch; /* Stretch items to container width */
 }
 
 #contact-form label {
-    text-align: right;
-    padding-right: 10px;
-    font-weight: bold;
+    text-align: left; /* Align labels to the left */
+    font-weight: 500;
+    color: #555;
+    margin-bottom: 5px; /* Add spacing below labels */
 }
 
 #contact-form input,
-#contact-form textarea {
-    width: 90%; 
-    padding: 10px;
+#contact-form textarea,
+#contact-form select {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 15px; /* Add spacing below inputs */
     border: 1px solid #ccc;
-    border-radius: 4px;
-    font-family: inherit; 
+    border-radius: 6px;
+    font-family: inherit;
     font-size: 1em;
-}
-
-#contact-form textarea {
-    resize: vertical; /* Allow vertical resizing */
-    min-height: 100px;
+    transition: box-shadow 0.3s ease, border-color 0.3s ease;
 }
 
 #contact-form input:focus,
-#contact-form textarea:focus {
+#contact-form textarea:focus,
+#contact-form select:focus {
     outline: none;
-    border-color: #007bff; 
-    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5); 
+    border-color: #007bff;
+    box-shadow: 0 0 8px rgba(0, 123, 255, 0.5);
+}
+
+#contact-form fieldset {
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    padding: 16px;
+    margin-bottom: 15px; /* Add spacing below fieldset */
+}
+
+#contact-form legend {
+    font-weight: 500;
+    padding: 0 8px;
+    color: #555;
+}
+
+#contact-form input[type="radio"] {
+    display: inline-block;
+    width: auto;
+    margin-right: 8px;
 }
 
 #contact-form button[type="submit"] {
-    grid-column: 2; /* Span across the input columns */
     background-color: #007bff;
     color: #fff;
     border: none;
-    padding: 10px 20px;
-    border-radius: 5px;
+    padding: 12px 24px;
+    border-radius: 8px;
     cursor: pointer;
     font-size: 1.1em;
     transition: background-color 0.3s ease;
-    justify-self: start; /* Align button to the left */
 }
 
 #contact-form button[type="submit"]:hover {
@@ -252,7 +332,6 @@ input[type="submit"]:hover {
 }
 
 #form-status {
-    grid-column: 1 / 3; /* Span across all columns */
     padding: 10px;
     margin-top: 10px;
     text-align: center;
@@ -271,77 +350,307 @@ input[type="submit"]:hover {
     border: 1px solid #f5c6cb;
     border-radius: 4px;
 }
-#ResumeContent {
-    padding: 20px;
-    flex: 1;
+
+/* Resume */
+
+.ResumeSection:first-child {
+    margin-top: 80px;
 }
 
 .ResumeSection {
-    margin-bottom: 20px;
     background-color: #fff;
-    padding: 15px;
+    padding: 30px;
+    margin: 20px auto;
+    max-width: 800px;
     border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    line-height: 1.6;
+    font-size: 1em;
+    color: #333;
+    text-align: left;
+}
+
+.ResumeSection h1,
+.ResumeSection h2,
+.ResumeSection h3 {
+    color: #2c3e50;
+    margin-bottom: 20px;
+}
+
+.ResumeSection h1 {
+    font-size: 2.5em;
+    text-align: left;
+}
+
+.ResumeSection h2 {
+    font-size: 1.8em;
+}
+
+ResumeSection h3 {
+    font-size: 1.4em;
+}
+
+.ResumeSection p {
+    margin-bottom: 20px;
+}
+
+.ResumeSection ul,
+.ResumeSection ol {
+    list-style-type: none;
+    padding-left: 0;
+    margin-left: 0;
+}
+
+.ResumeSection li {
+    margin-bottom: 10px;
 }
 
 .ResumeItem {
-    margin-bottom: 10px;
+    margin-bottom: 30px;
 }
-header {
-    background-color: #333;
-    color: #fff;
-    padding: 20px 0;
-}
-ul {
-    list-style-type: none;
-}
-ol {
-    list-style-type: none;
-}
-hr {
-    border: 1px solid #ddd;
-    margin: 20px 0;
-}
+
 #currentDate {
     text-align: center;
-    margin-bottom: 20px;
+    font-style: italic;
+    color: #555;
+    margin-top: 30px;
+}
+
+.ResumeSection + .ResumeSection {
+    border-top: 1px solid #eee;
+    padding-top: 30px;
+}
+
+.ResumeSection a {
+    color: #007bff;
+    text-decoration: none;
+}
+
+.ResumeSection a:hover {
+    text-decoration: underline;
+}
+
+.ResumeSection strong {
+    font-weight: 600;
+    color: #2c3e50;
+}
+
+.ResumeSection em {
     font-style: italic;
     color: #555;
 }
 
-table {
-    width: 100%;
+.ResumeSection span {
+    color: #007bff;
+    font-weight: 500;
+}
+
+/* Resume Table */
+
+#educationTable {
+    width: 80%;
+    margin: 20px auto;
     border-collapse: collapse;
-    margin-bottom: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    background-color: #fff;
+    border-radius: 8px;
+    overflow: hidden;
 }
 
-table, th, td {
-    border: 1px solid #ddd;
-    padding: 8px;
-    text-align: left;
-}
-
-th {
-    background-color: #f2f2f2;
-}
-
-strong {
+#educationTable caption {
+    padding: 15px;
+    font-size: 1.2em;
     font-weight: bold;
+    text-align: center;
+    background-color: #f0f0f0;
+    border-bottom: 1px solid #ddd;
 }
 
-em {
-    font-style: italic;
+#educationTable th,
+#educationTable td {
+    padding: 12px 15px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
 }
-#CoverLetterContent {
-    padding: 20px;
-    flex: 1;
+
+#educationTable th {
+    background-color: #e0e0e0;
+    font-weight: 600;
+}
+
+#educationTable tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+#educationTable tr:hover {
+    background-color: #f0f0f0;
+}
+
+/* Resume Lists Editing */
+ul {
+    list-style-type: none;
+    text-align: center;
+    padding-left: 0;
+    margin-left: 0;
+}
+
+ol {
+    list-style-type: none;
+    text-align: center;
+    padding-left: 0;
+    margin-left: 0;
+}
+
+/* Cover Letter */
+
+.CoverLetterSection:first-child {
+    margin-top: 80px;
 }
 
 .CoverLetterSection {
-    margin-bottom: 20px;
     background-color: #fff;
-    padding: 15px;
+    padding: 30px;
+    margin: 20px auto;
+    max-width: 800px;
     border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     line-height: 1.6;
+    font-size: 1em;
+    color: #333;
+    text-align: left;
+}
+
+.CoverLetterSection h1 {
+    font-size: 2.2em;
+    margin-bottom: 20px;
+    color: #2c3e50;
+    text-align: left;
+}
+
+.CoverLetterSection p {
+    margin-bottom: 20px;
+    text-align: left;
+}
+
+.CoverLetterSection a {
+    color: #007bff;
+    text-decoration: none;
+}
+
+.CoverLetterSection a:hover {
+    text-decoration: underline;
+}
+
+.CoverLetterSection mark {
+    background-color: #fff3cd;
+    padding: 2px 5px;
+    border-radius: 3px;
+    font-weight: 600;
+}
+
+.CoverLetterSection strong {
+    font-weight: 600;
+    color: #2c3e50;
+}
+
+.CoverLetterSection em {
+    font-style: italic;
+    color: #555;
+}
+
+.CoverLetterSection span {
+    color: #007bff;
+    font-weight: 500;
+}
+
+/* Goals */
+
+.container {
+    max-width: 800px;
+    margin: 80px auto 20px;
+    padding: 30px;
+    background-color: #fff;
+    border-radius: 12px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+}
+
+.approach-intro,
+.approach-outro {
+    font-size: 1.1em;
+    color: #555;
+    margin-bottom: 20px;
+    text-align: left;
+}
+
+h1 {
+    font-size: 2.5em;
+    color: #2c3e50;
+    text-align: left;
+    margin-bottom: 30px;
+}
+
+h2 {
+    font-size: 1.8em;
+    color: #34495e;
+    text-align: left;
+    margin-top: 30px;
+    margin-bottom: 15px;
+    border-bottom: 2px solid #ddd;
+    padding-bottom: 10px;
+}
+
+ul {
+    list-style-type: none;
+    padding-left: 0;
+    margin-left: 0;
+}
+
+li {
+    font-size: 1.1em;
+    color: #333;
+    margin-bottom: 15px;
+    line-height: 1.6;
+}
+
+strong {
+    font-weight: 600;
+    color: #2c3e50;
+}
+
+.goals {
+    margin-bottom: 40px;
+}
+
+.aspirations {
+    margin-bottom: 40px;
+}
+
+.approach {
+    margin-bottom: 40px;
+}
+
+.approach p {
+    font-size: 1.1em;
+    color: #555;
+    margin-bottom: 20px;
+    text-align: left;
+}
+
+.media {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.media img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+}
+
+.media audio,
+.media video {
+    margin: 10px auto;
+    display: block;
 }

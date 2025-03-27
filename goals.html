@@ -9,7 +9,13 @@
 <body>
     <header>
         <nav class="Navbar">
-            <a href="index.html">Home</a>
+            <a href="index.html#Home" class="active">Home</a>
+            <a href="index.html#About">About</a>
+            <a href="index.html#GitHub">GitHub</a>
+            <a href="index.html#Contact">Contact</a>
+            <a href="resume.html">Resume</a>
+            <a href="cover_letter.html">Cover Letter</a>
+            <a href="goals.html">Goals</a>
         </nav>
     </header>
 
@@ -42,19 +48,19 @@
 
                 <section class="approach">
                     <h2>My Approach</h2>
-                    <p>I believe in a balanced approach to achieving my goals. This involves:</p>
+                    <p class="approach-intro">I believe in a balanced approach to achieving my goals. This involves:</p>
                     <ul>
                         <li>Consistent effort.</li>
                         <li>Lifelong learning.</li>
                         <li>Integrity and resilience.</li>
                     </ul>
-                    <p>I am excited about the future and the opportunities that lie ahead.</p>
+                    <p class="approach-outro">I am excited about the future and the opportunities that lie ahead.</p>
                 </section>
 
                 <section class="media">
                     <h2>Multimedia</h2>
                     <img src="images/family2.0.jpg" alt="Family is Everything!" width="300">
-                    <audio controls src="audio/recording.m4a">
+                    <audio controls src="audio/Recording2.0.mp3">
                         Your browser does not support the audio element.
                     </audio>
                     <video controls width="320" height="240" src="video/kidspups.mov">
@@ -64,12 +70,15 @@
 
                 <section id="Contact">
                     <h2>Contact Me</h2>
-                    <form id="contact-form" action="https://formspree.io/f/mqakbvzw" method="POST">
+                    <form id="contact-form" action="https://wp.zybooks.com/form-viewer.php" method="POST">
                         <label for="firstName">First Name:</label>
                         <input type="text" id="firstName" name="firstName" placeholder="Enter your first name" required>
 
                         <label for="lastName">Last Name:</label>
                         <input type="text" id="lastName" name="lastName" placeholder="Enter your last name" required>
+
+                        <label for="companyName">Company Name:</label>
+                        <input type="text" id="companyName" name="companyName" placeholder="Enter your company name">
 
                         <label for="email">Email:</label>
                         <input type="email" id="email" name="email" placeholder="Enter your email" required>
@@ -79,6 +88,23 @@
 
                         <label for="message">Message:</label>
                         <textarea id="message" name="message" placeholder="Write your message" required></textarea>
+
+                        <fieldset>
+                            <legend>Best Contact Time</legend>
+                            <input type="radio" id="contactAM" name="contactTime" value="am">
+                            <label for="contactAM">a.m.</label><br>
+                            <input type="radio" id="contactPM" name="contactTime" value="pm">
+                            <label for="contactPM">p.m.</label><br>
+                            <input type="radio" id="contactAnytime" name="contactTime" value="anytime">
+                            <label for="contactAnytime">Anytime</label>
+                        </fieldset>
+
+                        <label for="contactPreference">Contact Preference:</label>
+                        <select id="contactPreference" name="contactPreference">
+                            <option value="phone">Phone</option>
+                            <option value="email">Email</option>
+                            <option value="text">Text</option>
+                        </select>
 
                         <button type="submit">Send Message</button>
                     </form>

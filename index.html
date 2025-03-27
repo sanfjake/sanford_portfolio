@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,6 +10,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="css/profile.css">
 </head>
+
 <body>
     <header>
         <nav class="Navbar">
@@ -23,11 +25,7 @@
     </header>
 
     <section id="Home">
-        <video autoplay muted loop class="BackgroundVideo">
-            <source src="images/video/Typing.mp4" type="video/mp4">
-            Your browser does not support the video tag.
-        </video>
-        <div class="Video_Text">
+        <div class="Welcome">
             <h1>Jake W Sanford</h1>
             <p>Welcome to my portfolio! I am currently attending WGU's Software Engineering Bachelors degree.
                 This webpage is to showcase my projects and knowledge of coding.
@@ -36,51 +34,61 @@
     </section>
 
     <section id="About">
-        <div class="gallery-container">
-            <div class="gallery">
-                <div class="gallery-row">
-                    <img src="images/family2.0.JPG" alt="Jake Sanford's Family">
-                    <img src="images/christmas.png" alt="Christmas">
-                </div>
-                <div class="gallery-row">
-                    <img src="images/kids.JPG" alt="Kids">
-                    <img src="images/walk.png" alt="Walk">
-                </div>
-                <div class="gallery-row">
-                    <img src="images/trailer.jpg" alt="Trailer">
+        <div class="section-container">
+            <div class="gallery-container">
+                <div class="gallery">
+                    <div class="gallery-row">
+                        <img src="images/family2.0.JPG" alt="Jake Sanford's Family">
+                        <img src="images/christmas.png" alt="Christmas">
+                    </div>
+                    <div class="gallery-row">
+                        <img src="images/kids.JPG" alt="Kids">
+                        <img src="images/walk.png" alt="Walk">
+                    </div>
+                    <div class="gallery-row">
+                        <img src="images/trailer.jpg" alt="Trailer">
+                    </div>
                 </div>
             </div>
-        </div>
-        <div class="Column_2">
-            <h2>About Me</h2>
-            <p>
-                I am a software developer who loves to code! As a father of four, I enjoy
-                time with my family and traveling. I am set to graduate from WGU's Bachelors of Software Engineering in 2026.
-                Where I plan on changing fields from Chiropractic to Software Engineering. Below is a great rehab video i created for my chiropractic business
-                which will help with programmers upper back and neck pain.
-            </p>
-            <a href="https://www.youtube.com/watch?v=BU0yageEO0w" target="_blank" class="video-button">Watch My Video</a>
+            <div class="about-text">
+                <h2>About Me</h2>
+                <p>
+                    I am a software developer who loves to code! As a father of four, I enjoy
+                    time with my family and traveling. I am set to graduate from WGU's Bachelors of Software Engineering in
+                    2026.
+                    Where I plan on changing fields from Chiropractic to Software Engineering. Below is a great rehab video
+                    I created for my chiropractic business
+                    which will help with programmers upper back and neck pain.
+                </p>
+                <a href="https://www.youtube.com/watch?v=BU0yageEO0w" target="_blank" class="video-button">Watch My Video</a>
+            </div>
         </div>
     </section>
 
     <section id="GitHub">
-        <h2>GitHub</h2>
-        <p>
-            Explore more of my work and coding projects on my
-            <a href="https://github.com/sanfjake" target="_blank" class="GitHub_Link" aria-label="Visit Jake Sanford's GitHub Profile">
-                GitHub Profile
-            </a>
-        </p>
+        <div class="section-container">
+            <h2>GitHub</h2>
+            <p>
+                Explore more of my work and coding projects on my
+                <a href="https://github.com/sanfjake" target="_blank" class="GitHub_Link"
+                   aria-label="Visit Jake Sanford's GitHub Profile">
+                    GitHub Profile
+                </a>
+            </p>
+        </div>
     </section>
 
     <section id="Contact">
         <h2>Contact Me</h2>
-        <form id="contact-form" action="https://formspree.io/f/mqakbvzw" method="POST">
+        <form id="contact-form" action="https://wp.zybooks.com/form-viewer.php" method="POST">
             <label for="firstName">First Name:</label>
             <input type="text" id="firstName" name="firstName" placeholder="Enter your first name" required>
 
             <label for="lastName">Last Name:</label>
             <input type="text" id="lastName" name="lastName" placeholder="Enter your last name" required>
+
+            <label for="companyName">Company Name:</label>
+            <input type="text" id="companyName" name="companyName" placeholder="Enter your company name">
 
             <label for="email">Email:</label>
             <input type="email" id="email" name="email" placeholder="Enter your email" required>
@@ -90,6 +98,23 @@
 
             <label for="message">Message:</label>
             <textarea id="message" name="message" placeholder="Write your message" required></textarea>
+
+            <fieldset>
+                <legend>Best Contact Time</legend>
+                <input type="radio" id="contactAM" name="contactTime" value="am">
+                <label for="contactAM">a.m.</label><br>
+                <input type="radio" id="contactPM" name="contactTime" value="pm">
+                <label for="contactPM">p.m.</label><br>
+                <input type="radio" id="contactAnytime" name="contactTime" value="anytime">
+                <label for="contactAnytime">Anytime</label>
+            </fieldset>
+
+            <label for="contactPreference">Contact Preference:</label>
+            <select id="contactPreference" name="contactPreference">
+                <option value="phone">Phone</option>
+                <option value="email">Email</option>
+                <option value="text">Text</option>
+            </select>
 
             <button type="submit">Send Message</button>
         </form>
@@ -102,3 +127,9 @@
             <a href="mailto:jake.w.sanford@gmail.com">Email</a> |
             <a href="https://github.com/sanfjake" target="_blank" class="GitHub_Link">
                 GitHub
+            </a>
+        </p>
+    </footer>
+</body>
+
+</html>

@@ -9,7 +9,13 @@
 <body>
     <header>
         <nav class="Navbar">
-            <a href="index.html">Home</a>
+            <a href="index.html#Home" class="active">Home</a>
+            <a href="index.html#About">About</a>
+            <a href="index.html#GitHub">GitHub</a>
+            <a href="index.html#Contact">Contact</a>
+            <a href="resume.html">Resume</a>
+            <a href="cover_letter.html">Cover Letter</a>
+            <a href="goals.html">Goals</a>
         </nav>
     </header>
 
@@ -25,7 +31,7 @@
                 <h2>Work Experience</h2>
                 <article class="ResumeItem">
                     <h3>Mini-Cassia Chiropractic, Burley, Idaho - Physician/IT Specialist/Manager</h3>
-                    <p>January 2018 - Current</p>
+                    <p>January 2018 - Current<br>This <span>emphasizes</span> my diverse skill set.</p>
                     <ul>
                         <li>Manage all IT operations including PC, tablets, phones, WiFi and Access Points.</li>
                         <li>Daily use of the internet, Microsoft Word, Microsoft Excel, Microsoft Outlook and other applications.</li>
@@ -37,17 +43,43 @@
             </section>
 
             <section class="ResumeSection">
-                <h2>Education</h2>
-                <article class="ResumeItem">
-                    <h3>BYU-Idaho, Rexburg, ID</h3>
-                    <p>Bachelor of Science - Exercise Physiology (September 2012 - June 2014)</p>
-                </article>
-                <article class="ResumeItem">
-                    <h3>University of Western States, Portland, OR</h3>
-                    <p>Bachelor of Science - Human Biology (September 2014 - December 2017)</p>
-                    <p>Master of Science - Sports Medicine</p>
-                    <p>Doctor of Chiropractic</p>
-                </article>
+                <table id="educationTable">
+                    <caption>Education Summary</caption>
+                    <thead>
+                        <tr>
+                            <th>School</th>
+                            <th>Graduate Level</th>
+                            <th>Degree</th>
+                            <th>Graduation Date</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>BYU-Idaho</td>
+                            <td>Bachelor's</td>
+                            <td>Bachelor of Science - Exercise Physiology</td>
+                            <td>June 2014</td>
+                        </tr>
+                        <tr>
+                            <td>University of Western States</td>
+                            <td>Bachelor's</td>
+                            <td>Bachelor of Science - Human Biology</td>
+                            <td>December 2017</td>
+                        </tr>
+                        <tr>
+                            <td>University of Western States</td>
+                            <td>Master's</td>
+                            <td>Master of Science - Sports Medicine</td>
+                            <td>December 2017</td>
+                        </tr>
+                        <tr>
+                            <td>University of Western States</td>
+                            <td>Doctorate</td>
+                            <td>Doctor of Chiropractic</td>
+                            <td>December 2017</td>
+                        </tr>
+                    </tbody>
+                </table>
             </section>
 
             <section class="ResumeSection">
@@ -71,24 +103,7 @@
             <hr>
             <div id="currentDate"></div>
 
-            <table id="myTable">
-                <thead>
-                    <tr>
-                        <th>Field</th>
-                        <th>Value</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td><strong>Name</strong></td>
-                        <td><em>Jake Sanford</em></td>
-                    </tr>
-                    <tr>
-                        <td><strong>Title</strong></td>
-                        <td>Physician/IT Specialist/Manager</td>
-                    </tr>
-                </tbody>
-            </table>
+
         </article>
     </main>
 
